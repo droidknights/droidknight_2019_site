@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Main from "./Main";
 import Footer from "src/components/Footer";
 import Menu from "src/components/Menu";
+import Schedule from "./Schedule";
 
 interface AppProps {}
 
@@ -61,6 +62,7 @@ class App extends React.Component<AppProps, AppState> {
           </Header>
           <main>
             <Main isPhone={this.state.width < 480} />
+            <Schedule />
           </main>
           <Footer>
             {this.state.width < 480 ? (

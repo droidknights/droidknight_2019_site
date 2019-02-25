@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 140px 0;
+  margin-top: 140px;
 
   & > div.title {
     position: relative;
