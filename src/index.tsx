@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./containers/App";
-import { BrowserRouter as Router } from "react-router-dom";
 
 import { createGlobalStyle } from "styled-components";
 
@@ -33,11 +32,9 @@ const Global = createGlobalStyle`
   }
 `;
 ReactDOM.render(
-  <Router>
-    <>
-      <Global />
-      <App />
-    </>
-  </Router>,
+  <>
+    <Global />
+    <App />
+  </>,
   document.getElementById("root") as HTMLElement
 );

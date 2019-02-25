@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 interface MenuProps {}
 
@@ -38,11 +37,11 @@ const Wrapper = styled.div`
 const Menu: React.FunctionComponent<MenuProps> = props => {
   return (
     <Wrapper>
-      <Link to="#">HOME</Link>
-      <Link to="#">ABOUT</Link>
-      <Link to="#">SCHEDULE</Link>
-      <Link to="#">SPONSOR</Link>
-      <Link to="#">VENUE</Link>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SCHEDULE</a>
+      <a href="#">SPONSOR</a>
+      <a href="#">VENUE</a>
     </Wrapper>
   );
 };
