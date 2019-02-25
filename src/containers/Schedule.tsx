@@ -46,6 +46,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-device-width: 480px) {
+    padding: 101px 8% 137px 8%;
     & > div.desc,
     & > div.desc2 {
       font-size: 13px;
