@@ -57,7 +57,18 @@ const SponsorContent = styled.div`
   flex-direction: column;
   align-items: center;
   & > img {
-    width: 40%;
+    width: 27%;
+    margin-top: 20px;
+
+    &.platinum {
+      width: 41%;
+    }
+    &.gold {
+      width: 34%;
+    }
+    &.silver {
+      width: 37%;
+    }
   }
 
   & > span {
@@ -71,15 +82,12 @@ const SponsorContent = styled.div`
     color: #003e61;
 
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   @media only screen and (max-device-width: 480px) {
     & > span {
       font-size: 41px;
-    }
-
-    & > img {
-      width: 80%;
     }
   }
 `;
@@ -113,7 +121,29 @@ export default class Location extends React.Component<LocationProps, any> {
         </LocationContent>
         <div className="title">SPONSOR</div>
         <SponsorContent>
-          <img src={require("../assets/images/sponsor-tbd.png")} alt="" />
+          <img
+            className="platinum"
+            src={require("../assets/images/sponsor-platinum.png")}
+            alt=""
+          />
+          <span>COMING SOON...</span>
+
+          <img
+            className="gold"
+            src={require("../assets/images/sponsor-gold.png")}
+            alt=""
+          />
+          <img
+            className="sponsor"
+            src={require("../assets/images/sponsors/헤이딜러.png")}
+            alt=""
+          />
+
+          <img
+            className="silver"
+            src={require("../assets/images/sponsor-silver.png")}
+            alt=""
+          />
           <span>COMING SOON...</span>
         </SponsorContent>
       </Wrapper>

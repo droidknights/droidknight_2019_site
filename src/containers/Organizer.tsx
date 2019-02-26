@@ -110,7 +110,7 @@ export default class Organizer extends React.Component<OrganizerProps, any> {
           <Item>
             <img src={require("../assets/images/person/프루.png")} alt="" />
             <div>
-              <span>프루</span>
+              <span>Pluu</span>
               <a href="https://twitter.com/pluulove">
                 <img src={require("../assets/images/link.png")} alt="" />
               </a>
