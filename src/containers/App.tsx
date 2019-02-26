@@ -4,6 +4,8 @@ import Main from "./Main";
 import Footer from "src/components/Footer";
 import Menu from "src/components/Menu";
 import Schedule from "./Schedule";
+import Location from "./Location";
+import Organizer from "./Organizer";
 
 interface AppProps {}
 
@@ -26,7 +28,8 @@ const Header = styled.header`
     props.isPhone ? "center" : "space-between"};
   height: 20px;
   /* padding: 23px 14.4% 41px 14.4%; */
-  padding: 23px 14.4%;
+  padding: 0 14.4%;
+  margin-top: 23px;
   & > img {
     width: ${(props: { isPhone: boolean }) => (props.isPhone ? "40%" : "18%")};
   }
@@ -63,6 +66,8 @@ class App extends React.Component<AppProps, AppState> {
           <main>
             <Main isPhone={this.state.width < 480} />
             <Schedule />
+            <Location isPhone={this.state.width < 480} />
+            <Organizer />
           </main>
           <Footer>
             {this.state.width < 480 ? (

@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
-
+import { Element } from "react-scroll";
 export interface ScheduleProps {}
 
-const Wrapper = styled.div`
+const Wrapper = styled(Element)`
   padding: 101px 14.4% 137px 14.4%;
   background-color: #0f1723;
   display: flex;
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-device-width: 480px) {
-    padding: 101px 8% 137px 8%;
+    padding: 69px 8% 60px 8%;
     & > div.desc,
     & > div.desc2 {
       font-size: 13px;
@@ -141,7 +141,7 @@ const Boarder = styled.div`
 export default class Schedule extends React.Component<ScheduleProps, any> {
   public render() {
     return (
-      <Wrapper>
+      <Wrapper name="schedule">
         <div className="title">SCHEDULE</div>
         <div className="desc">드로이드 나이츠 2019는 3트랙으로 진행됩니다.</div>
         <div className="desc2">2월 중에 전체 세션이 공개됩니다.</div>

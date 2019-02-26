@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-
+import { Element } from "react-scroll";
 export interface MainProps {
   isPhone: boolean;
 }
@@ -92,7 +92,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-device-width: 480px) {
-    margin: 100px 0 70px 0;
+    margin: 100px 0 0 0;
     & > div.title {
       padding: 0 0;
     }
@@ -170,7 +170,7 @@ export default class Main extends React.Component<MainProps, MainState> {
           />
         </a>
 
-        <div className="dk-2018">
+        <Element className="dk-2018" name="about">
           <div>
             <img src={require("../assets/images/dk-2018.png")} alt="" />
           </div>
@@ -191,7 +191,7 @@ export default class Main extends React.Component<MainProps, MainState> {
               공유하고 서로 교류할 수 있는 행사가 되기를 희망합니다.
             </p>
           </div>
-        </div>
+        </Element>
       </Wrapper>
     );
   }

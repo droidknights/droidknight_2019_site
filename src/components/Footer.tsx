@@ -10,6 +10,8 @@ const Footer = styled.footer`
   letter-spacing: normal;
   text-align: center;
   color: #767676;
+  background-color: #080e17;
+  padding-bottom: 29px;
 `;
 
 export default Footer;

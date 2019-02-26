@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import { scroller } from "react-scroll";
+
 interface MenuProps {}
 
 const Wrapper = styled.div`
@@ -16,7 +18,7 @@ const Wrapper = styled.div`
   height: 100%;
   justify-content: flex-end;
 
-  & > a {
+  & > div {
     font-family: "SilkScreen";
     font-size: 18px;
     font-stretch: expanded;
@@ -27,21 +29,34 @@ const Wrapper = styled.div`
 
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &:not(:first-child) {
       margin-left: 5%;
+    }
+
+    &:hover {
+      color: #45fc17;
     }
   }
 `;
 
 const Menu: React.FunctionComponent<MenuProps> = props => {
+  const scrollTo = (name: string) => {
+    scroller.scrollTo(name, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    });
+  };
+
   return (
     <Wrapper>
-      <a href="#">HOME</a>
-      <a href="#">ABOUT</a>
-      <a href="#">SCHEDULE</a>
-      <a href="#">SPONSOR</a>
-      <a href="#">VENUE</a>
+      <div onClick={() => scrollTo("about")}>ABOUT</div>
+      <div onClick={() => scrollTo("schedule")}>SCHEDULE</div>
+      <div onClick={() => scrollTo("location")}>LOCATION</div>
+      <div onClick={() => scrollTo("sponsor")}>SPONSOR</div>
+      <div onClick={() => scrollTo("organizer")}>ORGANIZER</div>
     </Wrapper>
   );
 };
