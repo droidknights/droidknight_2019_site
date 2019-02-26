@@ -13,6 +13,7 @@
     "no-empty-interface": false,
     "interface-name": false,
     "no-var-requires": false,
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "no-console": false
   }
 }

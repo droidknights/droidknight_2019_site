@@ -65,7 +65,7 @@ class App extends React.Component<AppProps, AppState> {
           </Header>
           <main>
             <Main isPhone={this.state.width < 480} />
-            <Schedule />
+            <Schedule isPhone={this.state.width < 768} />
             <Location isPhone={this.state.width < 480} />
             <Organizer />
           </main>
