@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { NaverMap } from "react-naver-maps";
+import { NaverMap, Marker } from "react-naver-maps";
 import { Element } from "react-scroll";
 
 export interface LocationProps {
@@ -44,7 +44,7 @@ const Wrapper = styled(Element)`
   }
 `;
 
-const LocationContent = styled(Element)`
+const LocationContent = styled.div`
   width: 50%;
 
   @media only screen and (max-device-width: 480px) {
@@ -107,7 +107,7 @@ export default class Location extends React.Component<LocationProps, any> {
             "장소 코엑스 E홀 / 서울특별시 강남구 영동대로 513 (삼성동, 코엑스)"
           )}
         </div>
-        <LocationContent name="sponsor">
+        <LocationContent>
           <NaverMap
             mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
             style={{
@@ -115,11 +115,15 @@ export default class Location extends React.Component<LocationProps, any> {
               width: "100%",
               height: "400px"
             }}
-            defaultCenter={{ lat: 37.5107735, lng: 127.0576294 }}
-            defaultZoom={10}
-          />
+            defaultCenter={{ lat: 37.5117818, lng: 127.0592741 }}
+            defaultZoom={11}
+          >
+            <Marker position={{ lat: 37.5117818, lng: 127.0592741 }} />
+          </NaverMap>
         </LocationContent>
-        <div className="title">SPONSOR</div>
+        <Element className="title" name="sponsor">
+          SPONSOR
+        </Element>
         <SponsorContent>
           <img
             className="platinum"

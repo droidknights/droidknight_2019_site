@@ -79,11 +79,13 @@ const ScheduleContent = styled.div`
 const TrackTable = styled.div`
   width: 100%;
   border-bottom: 2px solid #4c4c4c;
+  margin-bottom: 15px;
 `;
 
 const TrackTableHeader = styled.div`
   padding-left: 110px;
-  padding-bottom: 19px;
+  padding-bottom: 16px;
+  padding-top: 16px;
   display: flex;
   & > div {
     flex: 1;
@@ -156,6 +158,39 @@ const TrackTableColumn = styled.div`
 
     & > p:nth-child(1) {
       color: #ffd26e;
+    }
+  }
+`;
+
+const TrackTableColumnBlock = styled.div`
+  height: 55px;
+  color: #d8d8d8;
+  display: flex;
+  background-color: #303741;
+  border-bottom: solid 2px #4c4c4c;
+  padding: 11px 6px;
+  font-size: 15px;
+
+  & > div:nth-child(1) {
+    width: 110px;
+    word-wrap: break-word;
+    padding-right: 25px;
+  }
+
+  & > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  @media only screen and (max-device-width: 769px) {
+    & > div:nth-child(1) {
+      width: 70px;
     }
   }
 `;
@@ -252,6 +287,7 @@ export default class Schedule extends React.Component<
           ["장선옥", "Android Project with Multi Module"],
           ["Yusuke Konishi (English)", "Master of Android Theme "]
         ],
+        ["11:40~13:10", "점심시간"],
         [
           "13:10~13:40",
           ["박상권", "Kotlin 꼭 해야하나요?"],
@@ -297,54 +333,110 @@ export default class Schedule extends React.Component<
       <Wrapper name="schedule">
         <div className="title">SCHEDULE</div>
         <div className="desc">드로이드 나이츠 2019는 3트랙으로 진행됩니다.</div>
-        <div className="desc2">2월 중에 전체 세션이 공개됩니다.</div>
         <ScheduleContent>
           {this.props.isPhone ? (
             // tracktable for mobile
             <TrackTable>
               {/* track 1 */}
+              <TrackTableColumnBlock>
+                <div>09:00~09:50</div>
+                <div>
+                  <p>등록</p>
+                </div>
+              </TrackTableColumnBlock>
+              <TrackTableColumnBlock>
+                <div>09:50~10:00</div>
+                <div>
+                  <p>키노트</p>
+                </div>
+              </TrackTableColumnBlock>
               <TrackTableHeaderMobile>
                 <img src={require("../assets/images/track-1.png")} alt="" />
               </TrackTableHeaderMobile>
-              {this.state.tracks.map(value => (
-                <TrackTableColumn>
-                  <div style={{ width: 70 }}>{value[0]}</div>
-                  <div>
-                    <p>{value[1][0]}</p>
-                    <p>{value[1][1]}</p>
-                  </div>
-                </TrackTableColumn>
-              ))}
+              {this.state.tracks.map((value, idx) =>
+                idx === 2 ? (
+                  <TrackTableColumnBlock>
+                    <div style={{ width: 70 }}>11:40~13:10</div>
+                    <div>
+                      <p>점심시간</p>
+                    </div>
+                  </TrackTableColumnBlock>
+                ) : (
+                  <TrackTableColumn>
+                    <div style={{ width: 70 }}>{value[0]}</div>
+                    <div>
+                      <p style={{ color: "#00f0e4" }}>{value[1][0]}</p>
+                      <p>{value[2][1]}</p>
+                    </div>
+                  </TrackTableColumn>
+                )
+              )}
               {/* track 2 */}
               <TrackTableHeaderMobile>
                 <img src={require("../assets/images/track-2.png")} alt="" />
               </TrackTableHeaderMobile>
-              {this.state.tracks.map(value => (
-                <TrackTableColumn>
-                  <div style={{ width: 70 }}>{value[0]}</div>
-                  <div>
-                    <p style={{ color: "#00f0e4" }}>{value[2][0]}</p>
-                    <p>{value[2][1]}</p>
-                  </div>
-                </TrackTableColumn>
-              ))}
+              {this.state.tracks.map((value, idx) =>
+                idx === 2 ? (
+                  <TrackTableColumnBlock>
+                    <div style={{ width: 70 }}>11:40~13:10</div>
+                    <div>
+                      <p>점심시간</p>
+                    </div>
+                  </TrackTableColumnBlock>
+                ) : (
+                  <TrackTableColumn>
+                    <div style={{ width: 70 }}>{value[0]}</div>
+                    <div>
+                      <p style={{ color: "#00f0e4" }}>{value[2][0]}</p>
+                      <p>{value[2][1]}</p>
+                    </div>
+                  </TrackTableColumn>
+                )
+              )}
               {/* track 3 */}
+              <TrackTableColumnBlock>
+                <div>09:50~10:00</div>
+                <div>
+                  <p>키노트</p>
+                </div>
+              </TrackTableColumnBlock>
               <TrackTableHeaderMobile>
                 <img src={require("../assets/images/track-3.png")} alt="" />
               </TrackTableHeaderMobile>
-              {this.state.tracks.map(value => (
-                <TrackTableColumn>
-                  <div style={{ width: 70 }}>{value[0]}</div>
-                  <div>
-                    <p style={{ color: "#ffd26e" }}>{value[3][0]}</p>
-                    <p>{value[3][1]}</p>
-                  </div>
-                </TrackTableColumn>
-              ))}
+              {this.state.tracks.map((value, idx) =>
+                idx === 2 ? (
+                  <TrackTableColumnBlock>
+                    <div style={{ width: 70 }}>11:40~13:10</div>
+                    <div>
+                      <p>점심시간</p>
+                    </div>
+                  </TrackTableColumnBlock>
+                ) : (
+                  <TrackTableColumn>
+                    <div style={{ width: 70 }}>{value[0]}</div>
+                    <div>
+                      <p style={{ color: "#00f0e4" }}>{value[3][0]}</p>
+                      <p>{value[2][1]}</p>
+                    </div>
+                  </TrackTableColumn>
+                )
+              )}
             </TrackTable>
           ) : (
             // tracktable for com
             <TrackTable>
+              <TrackTableColumnBlock>
+                <div>09:00~09:50</div>
+                <div>
+                  <p>등록</p>
+                </div>
+              </TrackTableColumnBlock>
+              <TrackTableColumnBlock>
+                <div>09:50~10:00</div>
+                <div>
+                  <p>키노트</p>
+                </div>
+              </TrackTableColumnBlock>
               <TrackTableHeader>
                 <div>
                   <img src={require("../assets/images/track-1.png")} alt="" />
@@ -356,28 +448,41 @@ export default class Schedule extends React.Component<
                   <img src={require("../assets/images/track-3.png")} alt="" />
                 </div>
               </TrackTableHeader>
-              {this.state.tracks.map(value => (
-                <TrackTableColumn>
-                  <div>{value[0]}</div>
-                  <div>
-                    <p>{value[1][0]}</p>
-                    <p>{value[1][1]}</p>
-                  </div>
+              {this.state.tracks.map((value, idx) =>
+                idx === 2 ? (
+                  <TrackTableColumnBlock>
+                    <div>11:40~13:10</div>
+                    <div>
+                      <p>점심시간</p>
+                    </div>
+                  </TrackTableColumnBlock>
+                ) : (
+                  <TrackTableColumn>
+                    <div>{value[0]}</div>
+                    <div>
+                      <p>{value[1][0]}</p>
+                      <p>{value[1][1]}</p>
+                    </div>
 
-                  <div>
-                    <p>{value[2][0]}</p>
-                    <p>{value[2][1]}</p>
-                  </div>
+                    <div>
+                      <p>{value[2][0]}</p>
+                      <p>{value[2][1]}</p>
+                    </div>
 
-                  <div>
-                    <p>{value[3][0]}</p>
-                    <p>{value[3][1]}</p>
-                  </div>
-                </TrackTableColumn>
-              ))}
+                    <div>
+                      <p>{value[3][0]}</p>
+                      <p>{value[3][1]}</p>
+                    </div>
+                  </TrackTableColumn>
+                )
+              )}
             </TrackTable>
           )}
         </ScheduleContent>
+        <div className="desc2">
+          * 트랙과 세션은 행사일정과 스피커분들의 사정에 따라서 변경될 수
+          있습니다.
+        </div>
         <Boarder />
         <div className="title">PROGRAM</div>
         <div className="desc">
