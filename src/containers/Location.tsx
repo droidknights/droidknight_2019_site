@@ -91,6 +91,57 @@ const SponsorContent = styled.div`
     }
   }
 `;
+
+
+const Heydeller = styled.div`
+  & > img {
+    width: 134px;
+    height: 134px;
+    object-fit: contain;
+    margin-top: 31px;
+  }
+`;
+
+const Jetbrain = styled.div`
+  & > img {
+    width: 140px;
+    height: 152px;
+    object-fit: contain;
+    margin-top: 42px;
+  }
+`;
+
+
+const Yanolja = styled.div`
+  & > img {
+    width: 202px;
+    height: 58px;
+    object-fit: contain;
+    margin-top: 42px;
+  }
+`;
+
+const BankSarad = styled.div`
+  & > img {
+    width: 242px;
+    height: 54px;
+    object-fit: contain;
+    margin-top: 42px;
+    margin-bottom: 113px;
+  }
+`;
+
+const Lezhin = styled.div`
+  & > img {
+    width: 84px;
+    height: 129px;
+    object-fit: contain;
+    margin-top: 11px;
+    margin-bottom: 98px;
+  }
+`;
+
+
 export default class Location extends React.Component<LocationProps, any> {
   public render() {
     return (
@@ -131,24 +182,59 @@ export default class Location extends React.Component<LocationProps, any> {
             alt=""
           />
           <span>COMING SOON...</span>
-
           <img
             className="gold"
             src={require("../assets/images/sponsor-gold.png")}
             alt=""
           />
-          <img
-            className="sponsor"
-            src={require("../assets/images/sponsors/헤이딜러.png")}
-            alt=""
-          />
+          <Heydeller>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/heydeller/banner.png")}
+              alt=""
+            />
+          </Heydeller>
+
+          <Jetbrain>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/jetbrain/banner.png")}
+              alt=""
+            />
+          </Jetbrain>
+
+          
+          <Yanolja>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/yanolja/banner.png")}
+              alt=""
+              />
+          </Yanolja>
+
+          <BankSarad>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/banksalad/banner.png")}
+              alt=""
+            />
+          </BankSarad>
+
+
 
           <img
             className="silver"
             src={require("../assets/images/sponsor-silver.png")}
             alt=""
           />
-          <span>COMING SOON...</span>
+           <Lezhin>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/lezhin/banner.png")}
+              alt=""
+            />
+          </Lezhin>
+
         </SponsorContent>
       </Wrapper>
     );
