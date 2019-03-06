@@ -365,8 +365,8 @@ export default class Schedule extends React.Component<
                   <TrackTableColumn>
                     <div style={{ width: 70 }}>{value[0]}</div>
                     <div>
-                      <p style={{ color: "#00f0e4" }}>{value[1][0]}</p>
-                      <p>{value[2][1]}</p>
+                      <p style={{ color: "#45fc17" }}>{value[1][0]}</p>
+                      <p>{value[1][1]}</p>
                     </div>
                   </TrackTableColumn>
                 )
@@ -415,8 +415,8 @@ export default class Schedule extends React.Component<
                   <TrackTableColumn>
                     <div style={{ width: 70 }}>{value[0]}</div>
                     <div>
-                      <p style={{ color: "#00f0e4" }}>{value[3][0]}</p>
-                      <p>{value[2][1]}</p>
+                      <p style={{ color: "#ffd26e" }}>{value[3][0]}</p>
+                      <p>{value[3][1]}</p>
                     </div>
                   </TrackTableColumn>
                 )
