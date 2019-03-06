@@ -273,7 +273,7 @@ export default class Schedule extends React.Component<
     this.state = {
       tracks: [
         [
-          "10:00~10:55",
+          "10:10~10:55",
           ["노재춘", "RxJava 구독과 구독 제거 메커니즘 설명"],
           ["김성일", "안드로이드 TDD 적용기"],
           ["정승욱", "동적 맵 프레임워크와 인터렉션 구현하기"]

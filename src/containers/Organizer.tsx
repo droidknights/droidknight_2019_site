@@ -32,7 +32,7 @@ const Wrapper = styled(Element)`
 const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 const Item = styled.div`
@@ -76,6 +76,7 @@ const Item = styled.div`
 
 const Hidden = styled.div`
   visibility: hidden;
+  width: 150px;
   height: 0;
   padding: 0;
   margin: 0;
@@ -153,10 +154,10 @@ export default class Organizer extends React.Component<OrganizerProps, any> {
             </div>
           </Item>
           <Item>
-            <img src={require("../assets/images/person/정석준.jpg")} alt="" />
+            <img src={require("../assets/images/person/정석준.png")} alt="" />
             <div>
               <span>정석준</span>
-              <a href="https://www.facebook.com/sjjeong1225">
+              <a href="https://www.youtube.com/channel/UCDIY8zPPYUCNbKHCmf9WSLg">
                 <img src={require("../assets/images/link.png")} alt="" />
               </a>
             </div>
@@ -211,6 +212,15 @@ export default class Organizer extends React.Component<OrganizerProps, any> {
             <div>
               <span>윤정현</span>
               <a href="https://www.facebook.com/profile.php?id=100007676581535">
+                <img src={require("../assets/images/link.png")} alt="" />
+              </a>
+            </div>
+          </Item>
+          <Item>
+            <img alt="" />
+            <div>
+              <span>이지윤</span>
+              <a href="https://m.facebook.com/jeeyun.lee.54">
                 <img src={require("../assets/images/link.png")} alt="" />
               </a>
             </div>
