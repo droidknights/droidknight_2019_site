@@ -354,7 +354,7 @@ export default class Schedule extends React.Component<
                 <img src={require("../assets/images/track-1.png")} alt="" />
               </TrackTableHeaderMobile>
               {this.state.tracks.map((value, idx) =>
-                idx === 2 ? (
+                idx === 4 ? (
                   <TrackTableColumnBlock>
                     <div style={{ width: 70 }}>13:25~15:00</div>
                     <div>
