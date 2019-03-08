@@ -299,7 +299,6 @@ export default class Schedule extends React.Component<
           ["김현", "모바일에서 오프라인 모드 적용 사례"],
           ["장인수", "Flutter Native Module Bady Step"]
         ],
-       
         ["13:25~15:00", "점심시간"],
         [
           "15:00~15:45",
@@ -357,7 +356,7 @@ export default class Schedule extends React.Component<
               {this.state.tracks.map((value, idx) =>
                 idx === 2 ? (
                   <TrackTableColumnBlock>
-                    <div style={{ width: 70 }}>11:40~13:10</div>
+                    <div style={{ width: 70 }}>13:25~15:00</div>
                     <div>
                       <p>점심시간</p>
                     </div>
@@ -377,9 +376,9 @@ export default class Schedule extends React.Component<
                 <img src={require("../assets/images/track-2.png")} alt="" />
               </TrackTableHeaderMobile>
               {this.state.tracks.map((value, idx) =>
-                idx === 2 ? (
+                idx === 4 ? (
                   <TrackTableColumnBlock>
-                    <div style={{ width: 70 }}>11:40~13:10</div>
+                    <div style={{ width: 70 }}>13:25~15:00</div>
                     <div>
                       <p>점심시간</p>
                     </div>
@@ -405,9 +404,9 @@ export default class Schedule extends React.Component<
                 <img src={require("../assets/images/track-3.png")} alt="" />
               </TrackTableHeaderMobile>
               {this.state.tracks.map((value, idx) =>
-                idx === 2 ? (
+                idx === 4 ? (
                   <TrackTableColumnBlock>
-                    <div style={{ width: 70 }}>11:40~13:10</div>
+                    <div style={{ width: 70 }}>13:25~15:00</div>
                     <div>
                       <p>점심시간</p>
                     </div>
@@ -450,9 +449,9 @@ export default class Schedule extends React.Component<
                 </div>
               </TrackTableHeader>
               {this.state.tracks.map((value, idx) =>
-                idx === 2 ? (
+                idx === 4 ? (
                   <TrackTableColumnBlock>
-                    <div>11:40~13:10</div>
+                    <div>13:25~15:00</div>
                     <div>
                       <p>점심시간</p>
                     </div>
