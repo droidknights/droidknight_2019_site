@@ -92,6 +92,16 @@ const SponsorContent = styled.div`
   }
 `;
 
+const Line = styled.div`
+  & > img {
+    width: 218px;
+    height: 82px;
+    object-fit: contain;
+    margin-top: 27px;
+    margin-bottom: 91px;
+  }
+`;
+
 
 const Heydeller = styled.div`
   & > img {
@@ -127,7 +137,16 @@ const BankSarad = styled.div`
     height: 54px;
     object-fit: contain;
     margin-top: 42px;
-    margin-bottom: 113px;
+  }
+`;
+
+const Ebrain = styled.div`
+  & > img {
+    width: 296px;
+    height: 53px;
+    object-fit: contain;
+    margin-top: 42px;
+    margin-bottom: 63px;
   }
 `;
 
@@ -181,7 +200,13 @@ export default class Location extends React.Component<LocationProps, any> {
             src={require("../assets/images/sponsor-platinum.png")}
             alt=""
           />
-          <span>COMING SOON...</span>
+          <Line>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/line/banner.svg")}
+              alt=""
+            />
+          </Line>
           <img
             className="gold"
             src={require("../assets/images/sponsor-gold.png")}
@@ -219,6 +244,14 @@ export default class Location extends React.Component<LocationProps, any> {
               alt=""
             />
           </BankSarad>
+
+          <Ebrain>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/ebrain/banner.png")}
+              alt=""
+            />
+          </Ebrain>
 
 
 
