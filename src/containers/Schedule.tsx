@@ -394,12 +394,6 @@ export default class Schedule extends React.Component<
                 )
               )}
               {/* track 3 */}
-              <TrackTableColumnBlock>
-                <div>09:50~10:00</div>
-                <div>
-                  <p>키노트</p>
-                </div>
-              </TrackTableColumnBlock>
               <TrackTableHeaderMobile>
                 <img src={require("../assets/images/track-3.png")} alt="" />
               </TrackTableHeaderMobile>
