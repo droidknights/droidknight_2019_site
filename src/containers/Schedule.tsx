@@ -287,39 +287,40 @@ export default class Schedule extends React.Component<
           ["장선옥", "Android Project with Multi Module"],
           ["Yusuke Konishi (English)", "Master of Android Theme "]
         ],
-        ["11:40~13:10", "점심시간"],
         [
-          "13:10~13:40",
-          ["박상권", "Kotlin 꼭 해야하나요?"],
-          ["김현", "모바일에서 오프라인 모드 적용 사례"],
-          ["장인수", "Flutter Native Module Bady Step"]
-        ],
-        [
-          "13:55~14:40",
+          "11:55~12:40",
           ["남상균", "코틀린 디자인 패턴"],
           ["황성현", "Clean Architecture (in Android) Revised"],
           ["노현석", "MotionLayout 무릎까지 담궈보기"]
         ],
         [
-          "14:55~15:45",
+          "12:55~13:25",
+          ["박상권", "Kotlin 꼭 해야하나요?"],
+          ["김현", "모바일에서 오프라인 모드 적용 사례"],
+          ["장인수", "Flutter Native Module Bady Step"]
+        ],
+       
+        ["13:25~15:00", "점심시간"],
+        [
+          "15:00~15:45",
           ["정동진", "코루틴 너 은행에서 뭐하니?"],
           ["강사룡", "안드로이드 아키텍처 총정리"],
           ["양찬석", "구글 플레이의 다이나믹 딜리버리 (APK는 이제 안녕)"]
         ],
         [
-          "15:55~16:25",
+          "16:00~16:30",
           ["권태환", "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?"],
           ["박민석", "PWA 품은 안드로이드 웹뷰 경험기"],
           ["안명욱", "Window 다루는 방법"]
         ],
         [
-          "16:40~17:25",
+          "16:45~17:30",
           ["정현지", "Dagger vs Koin 무엇이 좋을까요?"],
           ["남반석", "SVC 패턴으로 앱 쉽게 만들기"],
           ["차영호", "Android Gradle Plugin 버그 잡기"]
         ],
         [
-          "17:40~18:10",
+          "17:30~18:15",
           ["김범준", "Release ViewPager2!"],
           ["박미륵", "Advanced MVP"],
           ["신정아", "Tensorflow Lite 부터 MLKit, Mobile GPU 활용까지"]
