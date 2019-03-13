@@ -92,7 +92,6 @@ const SponsorContent = styled.div`
   }
 `;
 
-
 const Heydeller = styled.div`
   & > img {
     width: 134px;
@@ -110,7 +109,6 @@ const Jetbrain = styled.div`
     margin-top: 42px;
   }
 `;
-
 
 const Yanolja = styled.div`
   & > img {
@@ -141,6 +139,15 @@ const Lezhin = styled.div`
   }
 `;
 
+const HyperConnected = styled.div`
+  & > img {
+    width: 364px;
+    height: 34px;
+    object-fit: contain;
+    margin-top: 11px;
+    margin-bottom: 98px;
+  }
+`;
 
 export default class Location extends React.Component<LocationProps, any> {
   public render() {
@@ -203,13 +210,20 @@ export default class Location extends React.Component<LocationProps, any> {
             />
           </Jetbrain>
 
-          
+          <HyperConnected>
+            <img
+              className="sponsor"
+              src={require("../assets/images/sponsors/hyperconnected/banner.png")}
+              alt=""
+            />
+          </HyperConnected>
+
           <Yanolja>
             <img
               className="sponsor"
               src={require("../assets/images/sponsors/yanolja/banner.png")}
               alt=""
-              />
+            />
           </Yanolja>
 
           <BankSarad>
@@ -220,21 +234,18 @@ export default class Location extends React.Component<LocationProps, any> {
             />
           </BankSarad>
 
-
-
           <img
             className="silver"
             src={require("../assets/images/sponsor-silver.png")}
             alt=""
           />
-           <Lezhin>
+          <Lezhin>
             <img
               className="sponsor"
               src={require("../assets/images/sponsors/lezhin/banner.png")}
               alt=""
             />
           </Lezhin>
-
         </SponsorContent>
       </Wrapper>
     );
