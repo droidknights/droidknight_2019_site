@@ -6,12 +6,15 @@ import Menu from "src/components/Menu";
 import Schedule from "./Schedule";
 import Location from "./Location";
 import Organizer from "./Organizer";
+import Store, { ContextProps } from "src/store";
+import PopUp from "src/components/PopUp";
 
 interface AppProps {}
 
 interface AppState {
   width: number;
   height: number;
+  context: ContextProps;
 }
 
 const Wrapper = styled.div`
@@ -38,7 +41,18 @@ const Header = styled.header`
 class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
-    this.state = { width: 0, height: 0 };
+    this.state = {
+      width: 0,
+      height: 0,
+      context: {
+        popupInfo: undefined,
+        isOpen: false,
+        openPopUp: this.openPopup,
+        closePopUp: this.closePopup,
+        setPopUpInfo: this.setInfo,
+        track: 0
+      }
+    };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -55,9 +69,32 @@ class App extends React.Component<AppProps, AppState> {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
+  public openPopup = () => {
+    this.setState({ context: { ...this.state.context, isOpen: true } });
+  };
+
+  public closePopup = () => {
+    this.setState({ context: { ...this.state.context, isOpen: false } });
+  };
+
+  public setInfo = async (
+    info: {
+      title: string;
+      summary: string;
+      who: string;
+      name: string;
+      jop: string;
+    },
+    track: number
+  ) => {
+    await this.setState({
+      context: { ...this.state.context, popupInfo: info, track }
+    });
+  };
+
   public render() {
     return (
-      <>
+      <Store.Provider value={this.state.context}>
         <Wrapper>
           <Header isPhone={this.state.width < 480}>
             <img src={require("../assets/images/web_logo.png")} alt="" />
@@ -81,7 +118,15 @@ class App extends React.Component<AppProps, AppState> {
             )}
           </Footer>
         </Wrapper>
-      </>
+        {this.state.context.popupInfo && (
+          <PopUp
+            isOpen={this.state.context.isOpen}
+            close={this.closePopup}
+            info={this.state.context.popupInfo}
+            track={this.state.context.track}
+          />
+        )}
+      </Store.Provider>
     );
   }
 }
