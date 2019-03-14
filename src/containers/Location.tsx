@@ -209,7 +209,7 @@ export default class Location extends React.Component<LocationProps, any> {
           <Line>
             <img
               className="sponsor"
-              src={require("../assets/images/sponsors/line/banner.svg")}
+              src={require("../assets/images/sponsors/line/banner.png")}
               alt=""
             />
           </Line>
