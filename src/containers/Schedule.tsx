@@ -309,9 +309,9 @@ export default class Schedule extends React.Component<
           [
             "김성일",
             "안드로이드 TDD 적용기",
-            "앱 개발을 하며 느리고 반복적인 디바이스 테스트에 회의를 느끼고, 테스트를 도입하려고 마음먹었습니다.\n유틸성 클래스의 작은 단위테스트 작성부터 TDD를 적용하는 것을 목표로 수많은 시행착오를 겪었으며,\n그 결과, 최근 실무 프로젝트의 대부분을 TDD로 개발하였습니다.\n이번 프로젝트의 한 부분을 실례로 제시하며, 안드로이드 앱 개발 프로세스에 TDD를 적용하면서 느끼고 경험했던 모든 것을 공유합니다.\n\n  * TDD란?\n  * TDD를 위한 준비\n  * 비즈니스로직 - TDD로 개발하기\n  * UI - TDD로 개발하기",
+            "앱 개발을 하며 느리고 반복적인 디바이스 테스트에 회의를 느끼고, 테스트를 도입하려고 마음먹었습니다. 단위테스트 작성부터 TDD를 적용하는 것을 목표로 많은 시행착오를 겪었으며, 최근 실무 프로젝트의 대부분을 TDD로 개발하였습니다. 이번 프로젝트의 일부를 실례로 제시하며, 안드로이드 앱 개발과정에 TDD를 적용하면서 느끼고 경험했던 것을 공유합니다.",
             "[청중대상]\n* 안드로이드 테스트에 관심이 있는 모든 개발자\n[필수사항]\n* 안드로이드 앱 개발 경험\n[강연에 도움이 되는 사전지식]\n* MVP 아키텍처 패턴\n* Unit Test (Junit4)\n* UI Test (Espresso)",
-            "09년 Java 개발자를 시작으로, 11년부터 안드로이드 개발자의 길을 걸어왔습니다. 현재는 케어랩스에서 ‘굿닥’ 안드로이드 앱 개발을 담당하고 있으며, Kotlin과 Android Architecture, TDD에 관심을 가지며 즐겁게 개발하고 있습니다."
+            "케어랩스에서 ‘굿닥’ 안드로이드 앱 개발을 담당하고 있으며, Kotlin과 Android Architecture, TDD에 관심을 가지며 즐겁게 개발하고 있습니다."
           ],
           [
             "정승욱",
@@ -376,7 +376,7 @@ export default class Schedule extends React.Component<
             "Kotlin 꼭 해야하나요?",
             "- Kotlin이 공식언어로 지정된지 2년이 됐음에도 요즘 각종 안드로이드 커뮤니티에서 제일 많이 나오는 질문은 'Kotlin 꼭 해야하나요?' 입니다.\n- Java코드를 Kotlin코드로 코딩하기 시작하면서 느꼈던 Java코드와 Kotlin을 비교했을때의 특징과 장점들에 대해서 이야기 합니다.\n- Kotlin을 학습하려고 하는 분들을 위한 각종 팁들과 삽질경험들을 공유합니다.",
             "Kotlin 학습을 고려중인 안드로이드 개발자",
-            "현) PRND컴퍼니(헤이딜러) 안드로이드 개발팀장\n- 안드로이드 개발 9년차\n- 대기업, 증권회사, 스타트업 근무 경험\n(삼성SDS, 대신증권, 선의의경쟁, 하이퍼커넥트)\n- 중고폰 관련 서비스 '셀폰' 창업 경험\n- 개발자대회 및 창업대회 다수 수상\n- '박상권의 삽질블로그' 운영(https://gun0912.tistory.com)\n- 30개이상의 개인앱 출시 및 운영\n- 각종 개발자 행사 주최 및 발표 경험(https://event-us.kr/ted/event/list?State=end)"
+            "현) PRND컴퍼니(헤이딜러) 안드로이드 개발팀장\n- 안드로이드 개발 9년차\n- 대기업, 증권회사, 스타트업 근무 경험\n- 중고폰 관련 서비스 '셀폰' 창업 경험\n- 개발자대회 및 창업대회 다수 수상\n- '박상권의 삽질블로그' 운영\n- 30개이상의 개인앱 출시 및 운영\n- 각종 개발자 행사 주최 및 발표 경험"
           ],
           [
             "김현",
@@ -423,9 +423,9 @@ export default class Schedule extends React.Component<
           [
             "권태환",
             "코루틴 안전! 이쁘게 코루틴 사용하는 방법은?",
-            "코루틴을 쓰는건 다양하게 소개되고있다. 코루틴을 적용하는것도 어렵지 않게 사용할 수 있는데, 그러면 코루틴 내에서 발생하는 오류를 어떻게 캐치하고 안전하게 사용할 수 있을까? 코루틴 내에서 발생하는 오류를 안전하게 처리하는 방법을 소개하고, 코루틴으로 라이브러리 형태로 접근 하는 방법을 소개하려고 한다.\n  - 코루틴 소개\n  - 코루틴 사용중 발생하는 오류 처리 방법을 알아본다\n  - 코루틴 라이브러리를 직접 만들고 활용해보는 방법을 알아본다\n  - 실제 적용 사례를 함께 소개한다",
-            "코틀린을 읽는데 문제가 없다.\n코루틴에 관심이 있다.",
-            "저는 7년차 안드로이드 개발자이고, 꿈 많은 개발자가 되자! 블로그를 운영중입니다. "
+            "코루틴은 어렵지 않게 적용할 수 있다. 그러면 코루틴 내에서 발생하는 오류를 어떻게 캐치하고 안전하게 사용할 수 있을까? 코루틴 내에서 발생하는 오류를 안전하게 처리하는 방법을 소개하고, 코루틴으로 라이브러리 형태로 접근 하는 방법을 소개하려고 한다.\n - 코루틴 소개\n - 코루틴 사용 중 발생하는 오류 처리 방법을 알아본다\n - 코루틴 라이브러리를 직접 만들고 활용해보는 방법을 알아본다\n - 실제 적용 사례를 함께 소개한다",
+            "코틀린 코드 활용에 문제가 없다.\nkotlin coroutines에 관심이 있다.",
+            "7년차 안드로이드 개발자로 GDG Seoul 운영진, 드로이드나이츠 운영진이며, 3년 전부터 코틀린 학습 및 실 프로젝트에 적용하여 사용중입니다. 꿈 많은 개발자가 되자! 블로그를 통해 안드로이드 개발에 관련한 다양한 글을 비주기로 업로드하고 있으며, 현재는 카카오페이에서 안드로이드 개발을 하고 있습니다."
           ],
           [
             "박민석, 유진의",
@@ -637,13 +637,16 @@ export default class Schedule extends React.Component<
                             {value[1][0]}{" "}
                             <span
                               onClick={async () => {
-                                await context.setPopUpInfo({
-                                  title: value[1][1],
-                                  summary: value[1][2],
-                                  who: value[1][3],
-                                  name: value[1][0],
-                                  jop: value[1][4]
-                                }, 1);
+                                await context.setPopUpInfo(
+                                  {
+                                    title: value[1][1],
+                                    summary: value[1][2],
+                                    who: value[1][3],
+                                    name: value[1][0],
+                                    jop: value[1][4]
+                                  },
+                                  1
+                                );
                                 context.openPopUp();
                               }}
                             >
@@ -662,13 +665,16 @@ export default class Schedule extends React.Component<
                             {value[2][0]}{" "}
                             <span
                               onClick={async () => {
-                                await context.setPopUpInfo({
-                                  title: value[2][1],
-                                  summary: value[2][2],
-                                  who: value[2][3],
-                                  name: value[2][0],
-                                  jop: value[2][4]
-                                }, 2);
+                                await context.setPopUpInfo(
+                                  {
+                                    title: value[2][1],
+                                    summary: value[2][2],
+                                    who: value[2][3],
+                                    name: value[2][0],
+                                    jop: value[2][4]
+                                  },
+                                  2
+                                );
                                 context.openPopUp();
                               }}
                             >
@@ -687,13 +693,16 @@ export default class Schedule extends React.Component<
                             {value[3][0]}{" "}
                             <span
                               onClick={async () => {
-                                await context.setPopUpInfo({
-                                  title: value[3][1],
-                                  summary: value[3][2],
-                                  who: value[3][3],
-                                  name: value[3][0],
-                                  jop: value[3][4]
-                                }, 3);
+                                await context.setPopUpInfo(
+                                  {
+                                    title: value[3][1],
+                                    summary: value[3][2],
+                                    who: value[3][3],
+                                    name: value[3][0],
+                                    jop: value[3][4]
+                                  },
+                                  3
+                                );
                                 context.openPopUp();
                               }}
                             >
