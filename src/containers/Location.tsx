@@ -104,10 +104,12 @@ const Line = styled.div`
 
 const Heydeller = styled.div`
   & > img {
-    width: 134px;
-    height: 134px;
+    width: 234px;
+    height: 234px;
     object-fit: contain;
-    margin-top: 31px;
+
+    margin-bottom: -80px;
+    margin-top: -60px;
   }
 `;
 

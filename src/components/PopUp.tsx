@@ -116,7 +116,7 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
                     : "#45fc17"
               }}
             >
-              <img src={require("../assets/images/arrow-green.png")} alt="" />
+              <img src={props.track !== 1 ? props.track !== 2 ? require("../assets/images/arrow-orange.png") : require("../assets/images/arrow-mint.png") : require("../assets/images/arrow-green.png")} alt="" />
               발표자 {props.info.name}님
             </div>
             <div>
