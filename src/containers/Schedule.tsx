@@ -89,9 +89,17 @@ const TrackTableHeader = styled.div`
   padding-top: 16px;
   display: flex;
   & > div {
+    height: 34px;
+    display: flex;
+    align-items: center;
+
     flex: 1;
     & > img {
       width: 100px;
+    }
+
+    & > span {
+      margin-left: 10px;
     }
   }
 `;
@@ -99,11 +107,19 @@ const TrackTableHeader = styled.div`
 const TrackTableHeaderMobile = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-bottom: 19px;
   margin-top: 45px;
-  & > img {
+  & > div {
     width: 100px;
     height: 33.8px;
+    position: relative;
+    background-size: 100% 100%;
+    & > span {
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 10px);
+    }
   }
 `;
 
@@ -209,6 +225,9 @@ const TrackTableColumnBlock = styled.div`
 
     & > p {
       margin: 0;
+      & > span {
+        color: #45fc17;
+      }
     }
   }
 
@@ -388,8 +407,8 @@ export default class Schedule extends React.Component<
           ],
           [
             "장인수",
-            "Flutter Native Module Bady Step",
-            "Flutter의 전반적인 설명 후 Flutter 와 Native Module 간의 통신 개발하는 방법을 Baby Step 으로 소개 하고자 합니다. ",
+            "communication between flutter and native modules baby step",
+            "Flutter의 전반적인 설명 후 Flutter 와 Native Module 간의 통신 개발하는 방법을 Baby Step 으로 소개 하고자 합니다.",
             "Flutter 관심자, Cross-Platform 관심자,  Android 개발자",
             "팬택 시리우스 안드로이드 폰 개발로 처음으로 Android 개발에 입문 하여 다수의 삼성 갤럭시폰 모델, 캐나다에서 SNS 플랫폼 개발 하였고, 한국으로 귀국 후 ZUMO, 카쉐어링 모바일 서비스를 개발 하였습니다. 현재는 우아한형제들에서 배민마켓 모바일서비스를 개발합니다."
           ]
@@ -414,7 +433,7 @@ export default class Schedule extends React.Component<
 
           [
             "양찬석",
-            "구글 플레이의 다이나믹 딜리버리 (APK는 이제 안녕)",
+            "구글 플레이의 다이나믹 딜리버리 \n(APK는 이제 안녕)",
             "1. 왜 다이나믹 딜리버리가 필요할까?\n2. 구글에 앱 사인 키를 알려주세요.  \n3. 앱 번들 기능 소개 및 적용법\n4. 앱 번들 효과적으로 테스팅 하기\n5. 앱 번들 이 후 - 다이나믹 피쳐 모듈 소개\n6. 다이나믹 피쳐 모듈을 어떻게 활용할 수 있을까? (구현 및 UX)\n7. 앞으로 앱은 어떻게 배포되고 개발될까?",
             "구글 플레이의 앱 번들(App Bundle), 다이나믹 피쳐 모듈(Dynamic Feature Module), 인스턴트 앱(Instant App)등 새로운 배포 방법에 관해 관심 있는 분들 혹은 다운로드되는 APK 크기를 줄이는데 관심있는 분들.",
             "구글 코리아에서 Developer Advocate로 안드로이드 및 기타 구글의 다양한 기술을 다른 개발자 및 회사에 소개하는 역할을 합니다. 2009년부터 2015년까지 안드로이드 앱 개발자로 활동했습니다. 현재는 개발자 교육 및 파트너 문제 해결을 위해 안드로이드에서 새롭게 추가되는 기능 중심으로 살펴보고 있습니다."
@@ -431,7 +450,7 @@ export default class Schedule extends React.Component<
           ],
           [
             "박민석, 유진의",
-            "PWA 품은 안드로이드 웹뷰 경험기",
+            "PWA 를 이용한 안드로이드 웹뷰 성능 개선기",
             "웹뷰를 포함한 앱이 어떻게 하면 사용자에게 더 빠른 속도로 좋은 경험을 전달할 수 있을까요? PWA와 함께 기존 웹뷰의 한계를 극복하고 사용자 경험을 한층 더 발전시킨 경험을 공유합니다.",
             "1) 웹뷰를 이용한 하이브리드 앱을 만드시는 분들\n2) 웹뷰를 포함한 앱의 성능향상을 위해 불철주야 고민하시는 분들\n3) 오프라인에도 돌아가는 앱에 대해 고민하시는 분들",
             "박민석 - 휴마트컴퍼니에서 '트로스트' 서비스의 안드로이드 클라이언트를 개발하고 있습니다.\n유진의 - 안녕하세요. 진의입니다. 세상 모든 사람들과 친구가 되겠다는 꿈을 가지고 있습니다!"
@@ -449,15 +468,15 @@ export default class Schedule extends React.Component<
           [
             "정현지",
             "Dagger vs Koin 무엇이 좋을까요?",
-            "1. DI란 무엇일까?\n2. Dagger란 무엇일까?\n3. Koin란 무엇일까?\n4. 기본적인 두개의 기술에 대한 예시를 들면서 공통점과 차이점은 무엇일까?\n5. 본론\n  - 이렇게 사용해 보자( 예시 )\n  - Dagger / Koin 적용해보기\n  - 무엇이 우리 프로젝트에 더 어울릴까?\n  - DI 를 프로젝트에 적용했을 때 장단점은 무엇이 있을까?\n  - DI를 공부하고 이렇게 적용하면서 우리가 얻고자 하는 것이 무엇 일까?\n6. 마무리",
-            "기초적인 지식과 예시, 적용법을 자세히 알고싶어하는 주니어분들을 위한 발표를 준비하려고합니다. \n\n저 또한 아직 주니어라고 생각하기에 제가 공부하면서 겪었던 어려웠던점, 저도 공부하면서 알아간 것들을 잘 정리하여 새로운 기술에 필요한 기본적인 지식과 예시, 한발 짝  더 나아가 내부에 좀 더 깊이 들어간 내용까지 설명할 수 있도록 할 예정입니다. 저의 발표를 듣고 주니어 분들이 기본지식 + 활용,응용 예시까지 알게 되시고 이후 적용을 고민해보실 수 있도록 준비해 보겠습니다!",
-            "캐시슬라이드를 서비스하는 NBT에서 안드로이드 개발자로 일하는 4년차 개발자 정현지 입니다. 현재 GDG Android korea 운영진을 맡고있습니다. 성장을 위해 꾸준히 도전하고 부딪치기를 좋아합니다. "
+            "1. DI란 무엇일까?\n3. Koin란 무엇일까 ?\n2. Dagger란 무엇일까 ?\n4. 기본적인 두개의 기술에 대한 예시를 들면서 공통점과 차이점은 무엇일까?\n5. 본론\n    - 둘의 차이점 비교\n    - DI 를 적용했을 때 장단점은?\n    - DI를 공부하고 이렇게 적용하면서 우리가 얻고자 하는 것은?",
+            "기초적인 지식과 예시, 적용법을 자세히 알고싶어하는 주니어분들을 위한 발표를 준비하려고합니다.",
+            "캐시슬라이드를 서비스하는 NBT에서 안드로이드 개발자로 일하는 4년차 개발자 정현지 입니다. 현재 GDG Android korea 운영진을 맡고있습니다. 성장을 위해 꾸준히 도전하고 부딪치기를 좋아합니다."
           ],
           [
             "남반석",
             "SVC 패턴으로 앱 쉽게 만들기",
-            '안드로이드 앱 개발에 불편함을 느껴 "어떻게 더 쉽게 코드를 짤 수 있을까?"를 고민했습니다. 발표에서는 이 고민 포인트를 공유하고 SVC 패턴의 탄생 배경과 다른 패턴들과의 차이를 비교하고, SVC를 통해서 스펙이 많아 복잡한 화면을 어떻게 나눠서 유지보수를 쉽게 할 수 있을지, RecyclerView에서 ViewModel활용법 등 노하우를 공유합니다.',
-            "MVP, MVVM 둘중에 하나라도 경험한 개발자.\n또는 앱 화면 공통 구조를 만들어본 경험이 있는 개발자. (BaseActivity, BaseFragment 등)",
+            '"어떻게 더 쉽게 코드를 짤 수 있을까?"를 고민했습니다. 고민 포인트를 공유하고 SVC 패턴의 탄생 배경과 다른 패턴들과의 차이를 비교하고, SVC를 통해서 스펙이 많아 복잡한 화면을 어떻게 나눠서 유지보수를 쉽게 할 수 있을지, RecyclerView에서 ViewModel활용법 등 노하우를 공유합니다.',
+            "MVP, MVVM 둘중에 하나라도 경험한 개발자. 또는 앱 화면 공통 구조를 만들어본 경험이 있는 개발자. (BaseActivity, BaseFragment 등)",
             "안드로이드 개발 6년차입니다. 네이버에서 개발중이며 5개의 앱 개발 프로젝트에 참여했습니다. (포스트, 블로그, 디스코, 오디오클립, 셀렉티브) 성격과 머리가 단순해서 쉬운 개발, UX, UI을 추구합니다."
           ],
           [
@@ -479,15 +498,14 @@ export default class Schedule extends React.Component<
           ],
           [
             "김범준",
-            "Release ViewPager2!",
-            "최근 기존에 이야기만 무성하던 ViewPager2가 alpha 버전으로. 배포되었다는 소식 들으셨나요?. 아직 알파 버전이기는 하지만 왜 기존 ViewPager 대신 ViewPager2를 업데이트 했는지 실제 코드 변화는 어떻게 될지 함께 이야기 해봅시다.",
-            "ViewPager를 사용해 보았다.",
-            " 현재 레이니스트에서 안드로이드 개발자로 근무하는  김범준 입니다."
+            "ViewPager2 설레발 치기!",
+            "아직 알파 단계인 ViewPager2에 대하여 이야기 하고자 합니다. 왜 ViewPager2가 나온 걸까요? 어떤 유용한 기능들이 추가 되었는지, 기존 ViewPager를 사용 할 때와 어떤 차이점들이 있는지등을 내부 구현 코드와 예시를 적절히 섞어 설명드리려 합니다.",
+            "ViewPager가 무엇인지 아시는 분, 사용 해 보신 분, 알고 싶으신 분! \nViewPager를 사용하며 화가났던 적 힘들었던 적이 한번이라도 있으신 분!\nViewPager2 글보다 실제 설명을 통해 알고 싶으신 분!\n긴 세미나의 마지막을 가볍게 즐기고 싶으신 분들 환영합니다 :)",
+            "뱅크샐러드(레이니스트) 에서 안드로이드 개발자로 서비스를 만들고 있습니다. Kotlin, FRP에 많은 관심을 가지고 있습니다 :)"
           ],
-
           [
             "신정아",
-            "Tensorflow Lite 부터 MLKit, Mobile GPU 활용까지",
+            "Tensorflow Lite 부터 ML Kit, Mobile GPU 활용 까지",
             "안드로이드 환경에서의 Tensorflow Lite, ML Kit 활용법과 경험기를 공유합니다. 딥러닝 비전 모델 데모와 함께 더 나은 안드로이드 모바일 머신러닝 환경을 갖추기 위한 프리셋을 알아보고, Tensorflow Lite에서 새로 지원되는 기능인 Mobile GPU의 활용 까지 살펴봅니다.",
             "1) 모바일 머신러닝에 관심 있는 모든 분들\n2) Tensorflow Lite 혹은 ML Kit에 도전해보고 싶은 안드로이드 개발자\n3) 모바일에 자신의 Custom 딥러닝 모델을 적용해보고 싶은 연구자\n\n본 세션은 딥러닝에 대한 개괄적인 지식이 있으시면 더욱 알차게 들으실 수 있습니다.",
             "모바일 머신러닝 기술에 가치를 느끼는 안드로이드 개발자입니다. Research Engineer들과의 더 나은 협업을 위해 딥러닝을 공부하며, 지표 측정과 테스트를 생활화 합니다."
@@ -520,11 +538,19 @@ export default class Schedule extends React.Component<
                   <TrackTableColumnBlock>
                     <div>09:50~10:00</div>
                     <div>
-                      <p>키노트</p>
+                      <p>
+                        키노트 <span>E2,3,4</span>
+                      </p>
                     </div>
                   </TrackTableColumnBlock>
                   <TrackTableHeaderMobile>
-                    <img src={require("../assets/images/track-1.png")} alt="" />
+                    <div
+                      style={{
+                        backgroundImage: `url(${require("../assets/images/track-1.png")})`
+                      }}
+                    >
+                      <span style={{ color: "#45fc17" }}>E2,3,4</span>
+                    </div>
                   </TrackTableHeaderMobile>
                   {this.state.tracks.map((value, idx) =>
                     idx === 4 ? (
@@ -546,7 +572,13 @@ export default class Schedule extends React.Component<
                   )}
                   {/* track 2 */}
                   <TrackTableHeaderMobile>
-                    <img src={require("../assets/images/track-2.png")} alt="" />
+                    <div
+                      style={{
+                        backgroundImage: `url(${require("../assets/images/track-2.png")})`
+                      }}
+                    >
+                      <span style={{ color: "#00f0e4" }}>E5</span>
+                    </div>
                   </TrackTableHeaderMobile>
                   {this.state.tracks.map((value, idx) =>
                     idx === 4 ? (
@@ -568,7 +600,13 @@ export default class Schedule extends React.Component<
                   )}
                   {/* track 3 */}
                   <TrackTableHeaderMobile>
-                    <img src={require("../assets/images/track-3.png")} alt="" />
+                    <div
+                      style={{
+                        backgroundImage: `url(${require("../assets/images/track-3.png")})`
+                      }}
+                    >
+                      <span style={{ color: "#ffd26e" }}>E6</span>
+                    </div>
                   </TrackTableHeaderMobile>
                   {this.state.tracks.map((value, idx) =>
                     idx === 4 ? (
@@ -601,7 +639,9 @@ export default class Schedule extends React.Component<
                   <TrackTableColumnBlock>
                     <div>09:50~10:00</div>
                     <div>
-                      <p>키노트</p>
+                      <p>
+                        키노트 <span>E2,3,4</span>
+                      </p>
                     </div>
                   </TrackTableColumnBlock>
                   <TrackTableHeader>
@@ -610,18 +650,21 @@ export default class Schedule extends React.Component<
                         src={require("../assets/images/track-1.png")}
                         alt=""
                       />
+                      <span style={{ color: "#45fc17" }}>E2,3,4</span>
                     </div>
                     <div>
                       <img
                         src={require("../assets/images/track-2.png")}
                         alt=""
                       />
+                      <span style={{ color: "#00f0e4" }}>E5</span>
                     </div>
                     <div>
                       <img
                         src={require("../assets/images/track-3.png")}
                         alt=""
                       />
+                      <span style={{ color: "#ffd26e" }}>E6</span>
                     </div>
                   </TrackTableHeader>
                   {this.state.tracks.map((value, idx) =>
