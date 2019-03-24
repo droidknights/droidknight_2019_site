@@ -272,6 +272,7 @@ const ProgramItem = styled.div`
   & > p:nth-child(1) {
     color: #3dea11;
     margin-top: 0;
+    font-size: 18px;
   }
 
   & > p:nth-child(2) {
@@ -285,10 +286,35 @@ const ProgramItem = styled.div`
     margin-bottom: 0;
   }
 
+  &.last {
+    width: 100%;
+    margin-top: 22px;
+    display: flex;
+
+    & > p:nth-child(1) {
+      color: #01efe3;
+      margin: 0;
+      margin-right: 10px;
+    }
+
+    & > p:nth-child(2) {
+      margin: 0;
+    }
+  }
+
   @media only screen and (max-device-width: 480px) {
     width: 100%;
     height: 140px;
     margin-bottom: 23px;
+
+    &.last {
+      display: block;
+
+      & > p:nth-child(2) {
+        margin: inherit;
+        margin-bottom: 0;
+      }
+    }
   }
 `;
 
@@ -783,23 +809,33 @@ export default class Schedule extends React.Component<
                 <ProgramItem>
                   <p>코드리뷰</p>
                   <p>
-                    다른사람들은 어떻게 코딩할까요? <br /> 서로 코드를
-                    공유해봅시다.
+                    4가지 flutter 튜토리얼 코드를 각자 학습하며, 궁금한 부분이
+                    생기면 도움을 요청할 수 있습니다.
+                    <br />
+                    (노트북 지참)
                   </p>
                 </ProgramItem>
                 <ProgramItem>
                   <p>코드랩</p>
                   <p>
-                    해봐야지 생각하면서 미뤄둔 기술이 있나요? 드로이드
-                    나이츠에서 한번 시작해보세요!
+                    나의 코드를 간략히 소개하고, 다른 개발자들에게 리뷰를
+                    받습니다. <br />
+                    리뷰 과정 참관도 가능합니다.
                   </p>
                 </ProgramItem>
                 <ProgramItem>
                   <p>실시간 퀴즈쇼</p>
                   <p>
-                    당신의 개발력을 뽐내보세요! <br />
-                    푸짐한 상품이 함께합니다.
+                    일상적인 업무 속에서 성장하기 위한 노력을 공유하고, 함께
+                    방법을 찾아갑니다. 짧은 발표 후 주제별로 그룹지어 이야기를
+                    나눕니다.
                   </p>
+                </ProgramItem>
+              </ProgramItemWrapper>
+              <ProgramItemWrapper>
+                <ProgramItem className="last">
+                  <p>상시운영 퀴즈쇼</p>
+                  <p>자신의 코딩 실력을 뽐내어 랭킹 1위에 도전해보세요!</p>
                 </ProgramItem>
               </ProgramItemWrapper>
             </ProgramContent>
