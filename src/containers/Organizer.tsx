@@ -136,7 +136,7 @@ export default class Organizer extends React.Component<OrganizerProps, any> {
             </div>
           </Item>
           <Item>
-            <img alt="" />
+            <img src={require("../assets/images/person/권태환.jpg")} alt="" />
             <div>
               <span>권태환</span>
               <a href="http://thdev.tech">
