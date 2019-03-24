@@ -8,6 +8,7 @@ import Location from "./Location";
 import Organizer from "./Organizer";
 import Store, { ContextProps } from "src/store";
 import PopUp from "src/components/PopUp";
+import Application from "./Application";
 
 interface AppProps {}
 
@@ -103,6 +104,7 @@ class App extends React.Component<AppProps, AppState> {
           <main>
             <Main isPhone={this.state.width < 480} />
             <Schedule isPhone={this.state.width < 768} />
+            <Application />
             <Location isPhone={this.state.width < 480} />
             <Organizer />
           </main>
