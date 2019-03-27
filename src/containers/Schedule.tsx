@@ -809,18 +809,18 @@ export default class Schedule extends React.Component<
                 <ProgramItem>
                   <p>코드리뷰</p>
                   <p>
-                    4가지 flutter 튜토리얼 코드를 각자 학습하며, 궁금한 부분이
-                    생기면 도움을 요청할 수 있습니다.
-                    <br />
-                    (노트북 지참)
+                    나의 코드를 간략히 소개하고, 다른 개발자들에게 리뷰를
+                    받습니다. <br />
+                    리뷰 과정 참관도 가능합니다.
                   </p>
                 </ProgramItem>
                 <ProgramItem>
                   <p>코드랩</p>
                   <p>
-                    나의 코드를 간략히 소개하고, 다른 개발자들에게 리뷰를
-                    받습니다. <br />
-                    리뷰 과정 참관도 가능합니다.
+                    4가지 flutter 튜토리얼 코드를 각자 학습하며, 궁금한 부분이
+                    생기면 도움을 요청할 수 있습니다.
+                    <br />
+                    (노트북 지참)
                   </p>
                 </ProgramItem>
                 <ProgramItem>
@@ -834,7 +834,7 @@ export default class Schedule extends React.Component<
               </ProgramItemWrapper>
               <ProgramItemWrapper>
                 <ProgramItem className="last">
-                  <p>상시운영 퀴즈쇼</p>
+                  <p>라이트닝 토크</p>
                   <p>자신의 코딩 실력을 뽐내어 랭킹 1위에 도전해보세요!</p>
                 </ProgramItem>
               </ProgramItemWrapper>
