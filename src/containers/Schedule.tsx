@@ -514,7 +514,7 @@ export default class Schedule extends React.Component<
           ]
         ],
         [
-          "17:30~18:15",
+          "17:45~18:15",
           [
             "박미륵",
             "Advanced MVP",
@@ -824,7 +824,7 @@ export default class Schedule extends React.Component<
                   </p>
                 </ProgramItem>
                 <ProgramItem>
-                  <p>실시간 퀴즈쇼</p>
+                  <p>라이트닝 토크</p>
                   <p>
                     일상적인 업무 속에서 성장하기 위한 노력을 공유하고, 함께
                     방법을 찾아갑니다. 짧은 발표 후 주제별로 그룹지어 이야기를
@@ -834,7 +834,7 @@ export default class Schedule extends React.Component<
               </ProgramItemWrapper>
               <ProgramItemWrapper>
                 <ProgramItem className="last">
-                  <p>라이트닝 토크</p>
+                  <p>상시운영 퀴즈부스</p>
                   <p>자신의 코딩 실력을 뽐내어 랭킹 1위에 도전해보세요!</p>
                 </ProgramItem>
               </ProgramItemWrapper>
